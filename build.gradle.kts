@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
+    implementation("software.amazon.awscdk:cdk:0.22.0")      // https://mvnrepository.com/artifact/software.amazon.awscdk/cdk
 }
 
 tasks.withType<KotlinCompile> {
