@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.3.11"
+    application
 }
 
 group = "hello.cdk"
@@ -19,3 +20,13 @@ dependencies {
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
+
+application {
+    mainClassName = "com.acme.MyApp"
+
+    tasks.run<JavaExec> {
+
+        environment(Pair("CDK_OUTDIR", "./build/cdk"))
+    }
+}
+

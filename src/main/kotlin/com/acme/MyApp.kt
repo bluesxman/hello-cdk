@@ -1,3 +1,5 @@
+package com.acme
+
 import software.amazon.awscdk.App
 
 object MyApp {
