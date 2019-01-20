@@ -25,8 +25,9 @@ application {
     mainClassName = "com.acme.MyApp"
 
     tasks.run<JavaExec> {
-
-        environment(Pair("CDK_OUTDIR", "./build/cdk"))
+        environment(
+            "CDK_OUTDIR" to "./build/cdk"
+        )
     }
 }
 
